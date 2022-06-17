@@ -12,10 +12,10 @@ int main(int argc,char *argv[])
 
     while(dir!=NULL)
     {
-        dir=readdir(dirname);
         printf("Entry found :%s\n",dir->d_name);
         printf("Inode number of entry:%d\n",dir->d_ino);
         printf("Length of this record:%d\n",dir->d_reclen);
+        dir=readdir(dirname);
         getchar();
     }
 }
